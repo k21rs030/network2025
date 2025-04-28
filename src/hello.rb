@@ -1,3 +1,5 @@
-#! /usr/bin/env ruby
+#!/usr/bin/env ruby
 
-puts "Hello, World!"
+5.times do
+  puts "****"
+end

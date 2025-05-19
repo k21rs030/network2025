@@ -1,7 +1,10 @@
-File.open("reader.rb","r") do |file|
-    while line = file.gets&.chomp
-        # puts a.to_s + ": " +  line
-        # a+=1
-        puts (line)
+#/usr/local/bin/ruby
+
+
+ARGV.each do |i|
+    File.open(i,"r") do |file|
+        while line = file.gets&.chomp
+            puts (line)
+        end
     end
 end

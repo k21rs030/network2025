@@ -1,5 +1,4 @@
-#/usr/local/bin/ruby
-
+#!/usr/bin/env ruby
 
 ARGV.each do |i|
     File.open(i,"r") do |file|

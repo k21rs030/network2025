@@ -9,6 +9,20 @@ s.print("GET %s HTTP/1.1\r\n" %[dir])
 s.print("Host: %s\r\n" %[hostname])
 s.print("Connection: close\r\n")
 s.print("\r\n")
-while line=s.gets()&.chomp
-  pp(line)
+
+while true
+  p = s.gets()
+
+  if p=="\r\n"
+    break
+  end
+end
+
+while true
+  p = s.gets()
+  if p==nil
+    break
+  end
+  puts(p)
+
 end

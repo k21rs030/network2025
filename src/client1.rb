@@ -18,6 +18,8 @@ while true
   end
 end
 
+
+
 while true
   p = s.gets()
   if p==nil

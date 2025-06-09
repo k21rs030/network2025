@@ -24,5 +24,4 @@ while true
     break
   end
   puts(p)
-
 end

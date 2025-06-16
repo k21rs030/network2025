@@ -7,12 +7,10 @@ def server sock
 end
 
 
-
-
 s0 = TCPServer.open(80)
-sock = s0.accept()
-while buf = sock.gets()
-  p buf
+while true
+  sock = s0.accept()
+  server sock
 end
 sock.close()
 s0.close()

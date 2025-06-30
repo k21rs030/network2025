@@ -2,10 +2,25 @@
 require "socket"
 
 def server client
+  fl = true
   loop do
     b = client.gets&.chomp
+    # retrieved entire text 
     pp b
-    client.puts(b)
+    if fl == true
+      path = b.split(" ")[1]
+      client.puts "HTTP/1.0 200 OK"
+      client.puts
+      if path == "/hello"
+        client.puts("hello world")
+      else
+        client.puts(path)
+      end
+      
+
+      fl=false
+    end
+
     if b.empty?()
       client.close()
       sleep 60
